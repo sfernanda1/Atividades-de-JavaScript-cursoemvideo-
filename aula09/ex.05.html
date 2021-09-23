@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro passos em DOM</title>
+</head>
+    
+<style>
+    body{
+        background: rgb(122, 122, 143);
+        color: rgb(252, 246, 246);
+        font: normal 17pt arial;
+        text-align:justify;
+ }
+
+    #Título {
+        color: rgb(32, 32, 49);
+        text-transform: uppercase;
+
+    }
+
+    .subtitulo {
+        color:rgb(32, 32, 49) ;
+
+
+    }
+
+    .msg {
+
+        color: rgb(32,32,49);
+    }
+
+    .links {
+        color: rgb(32, 32, 49);
+    }
+
+    </style>
+
+<body>
+
+    <div id="Título"><strong>Iniciando estudos em DOM</strong></h1> </div>
+
+    <div class="subtitulo">
+    <p>Aprendendo a usar <strong>DOM</strong> em Java Script</p>
+    <p>Aulas do CursoemVideo </p>
+    </div>
+   
+    <div class="texto">
+        O Modelo de Documento por Objetos é uma convenção multiplataforma e independente
+        de linguagem de programação, fiscalizada pelo entidade World Wide Web Consortium, para
+        representação e interação com objetos em documentos HTML, XHTML e, XML.
+         <a href ="https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos"> Fonte </a>
+    </div>
+
+    <div class="links">
+        <h4>Links úteis</h4>
+        <ul>
+            <li> <a href="https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos">wikipedia</a></li>
+             <li> <a href="https://www.cursoemvideo.com/course/javascript/">Curso em video</a></li>
+        </ul>
+    </div>
+
+    <script>
+
+        
+
+       var ex1 = document.getElementsByTagName('p') [0] 
+       // selencionando window document por marca
+       //quando tem Elements precisa selecionar qual marca com []
+
+       document.write(ex1.innerText+' '+'continuação...')
+       // aqui está imprimindo na tela o que existe na variável. Obs: Usar InnerText para pegar texto
+       
+        document.write('<br>')
+        ex1.style.background = 'blue'
+        //aqui pulei a linha e em seguide mudei a cor do elemento
+
+
+       var ex2 = document.getElementById('Título')
+       alert('A aula de hoje é:' + ex2.innerText)
+       //Foi criada nova variável usando ID. E em seguida um alert
+
+       var ex3 = document.getElementsByClassName('texto') [0]
+       document.write('Na aula anterior você aprendeu que:' + ex3.innerText)
+      
+
+
+
+
+        
+    </script>
+
+    
+</body>
+</html>
