@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade Eleitoral</title>
+</head>
+<body>
+    <style>
+        body{
+            background: green;
+            color: yellow;
+        }
+
+    </style>
+    
+     <h1>Qual idade para votação no Brasil?</h1>
+   
+     Quantos anos você tem? <input type="number" id="idade">
+     <input type="button" value="Enviar" onclick="resolver()">
+
+     <div id="res"></div>
+
+     <script>
+         function resolver() {
+         var anos = document.getElementById('idade')
+         var resultado = document.getElementById (res)
+         var idd = Number (anos.value)
+         
+
+      if(idd<16) {
+        res.innerHTML = 'Você não pode votar'
+      } 
+      else if(idd>=16 && idd<=18 ||idd>=70){
+        res.innerHTML = 'Seu voto é opcional'
+      }
+      else{
+          res.innerHTML = 'Você deve votar'
+      }
+      
+
+    }
+
+
+     </script>
+    
+</body>
+</html>
